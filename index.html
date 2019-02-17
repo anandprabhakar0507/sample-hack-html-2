@@ -1,0 +1,293 @@
+<html>
+	<head>
+		<meta name="viewport" content ="width=device-width,initial-scale=1,user-scalable=yes" />
+		<title>Hacked By :: ANAND PRABHAKAR</title>
+		<script type="text/javascript">
+			if ( window.addEventListener ) {
+				var state = 0, konami = [38,38,40,40,37,39,37,39,66,65];
+				window.addEventListener("keydown", function(e) {
+					if ( e.keyCode == konami[state] ) state++;
+					else state = 0;
+					if ( state == 10 )
+						window.location = "https://www.youtube.com/watch?v=H2YbtKqe35M";}, true);			
+		</script>
+		<script type="text/javascript">
+            TypingText = function(element, interval, cursor, finishedCallback) {
+                if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == "undefined")) {
+                    this.running = true;
+                    return;
+                }
+                
+                this.element = element;
+                this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+                this.interval = (typeof interval == "undefined" ? 100 : interval);
+                this.origText = this.element.innerHTML;
+                this.unparsedOrigText = this.origText;
+                this.cursor = (cursor ? cursor : "");
+                this.currentText = "";
+                this.currentChar = 0;
+                this.element.typingText = this;
+                
+                if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+                
+                TypingText.all.push(this);
+                this.running = false;
+                this.inTag = false;
+                this.tagBuffer = "";
+                this.inHTMLEntity = false;
+                this.HTMLEntityBuffer = "";
+            }
+            
+
+            TypingText.all = new Array();
+            TypingText.currentIndex = 0;
+
+            TypingText.runAll = function() {
+                for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+}
+            TypingText.prototype.run = function() {
+                if(this.running) return;
+                if(typeof this.origText == "undefined") {
+                    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+                    return;
+                }
+                if(this.currentText == "") this.element.innerHTML = "";
+                if(this.currentChar < this.origText.length) {
+                    if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+                        this.tagBuffer = "<";
+                        this.inTag = true;
+                        this.currentChar++;
+                        this.run();
+                        return;
+                    } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+                        this.tagBuffer += ">";
+                        this.inTag = false;
+                        this.currentText += this.tagBuffer;
+                        this.currentChar++;
+                        this.run();
+                        return;
+                    } else if(this.inTag) {
+                        this.tagBuffer += this.origText.charAt(this.currentChar);
+                        this.currentChar++;
+                        this.run();
+                        return;
+                    } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+                        this.HTMLEntityBuffer = "&";
+                        this.inHTMLEntity = true;
+                        this.currentChar++;
+                        this.run();
+                        return;
+                    } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+                        this.HTMLEntityBuffer += ";";
+                        this.inHTMLEntity = false;
+                        this.currentText += this.HTMLEntityBuffer;
+                        this.currentChar++;
+                        this.run();
+                        return;
+                    } else if(this.inHTMLEntity) {
+                        this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+                        this.currentChar++;
+                        this.run();
+                        return;
+                    } else {
+                        this.currentText += this.origText.charAt(this.currentChar);
+                    }
+                    
+                    this.element.innerHTML = this.currentText;
+                    this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : "");
+                    this.currentChar++;
+                    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+                } else {
+                    this.currentText = "";
+                    this.currentChar = 0;
+                    this.running = false;
+                    this.finishedCallback();
+                }
+            }
+
+                        function disableselect(e){
+                return false
+            }
+
+            function reEnable(){
+                return true
+            }
+
+            //if IE4+
+            document.onselectstart=new Function ("return false")
+            document.oncontextmenu=new Function ("return false")
+            //if NS6
+            if (window.sidebar){
+                document.onmousedown=disableselect
+                document.onclick=reEnable
+            }
+        </script>
+		<style type=text/css>
+			/*Default Style*/
+			body {
+				background-repeat: repeat; 
+				background-image: url(http://nazitestzone.x10host.com/images/background.gif);
+				background-color: #000000;
+				font-family: Verdana, Arial;
+				font-size: 12px;
+				color: #FFFFFF;
+			}
+			/*Place-Holder Style*/
+			#Container {
+				margin-right: auto;
+				margin-left: auto;
+				width: 780px;
+			}
+			#Content {
+				border: 1px solid #24262B;
+				background-color: #000000;
+				margin-top: -13px;
+				padding: 10px;
+			}
+			/*Title Style*/
+			#Title {
+				font-family: Verdana, Arial;
+				margin-bottom: 10px;
+				font-weight: bold;
+				font-size: 22px;
+				color: #333333;
+			}
+			.style3 {
+				color: #444; 
+				font-size: 16px; 
+				font-family: Georgia, "Times New Roman", Times, serif; 
+			}
+			a { 
+				color: #444;
+			}
+			a:active { 
+				color: #444;
+			}
+			a:visited { 
+				color: #444;
+			}
+			a:hover { 
+				color: #444;
+			}
+		</style> 
+	</head>
+	<body>
+		<p align="center">
+			<font size="5" color="#333" face="Courier New">
+				<marquee behavior="scroll" direction="left"	scrollamount="9" scrolldelay="10" width="26%">
+					<span class="footerlink">
+						<b>ANAND PRABHAKAR</b>
+					</span>
+				</marquee>
+			</font>
+		</p>
+		<div id="Container">
+			<div id="Title">
+				<center>
+					Welcome FRIEND!!
+				</center>
+			</div>
+			<!-- Content -->
+			<div id="Content">
+				<p align="center">
+					<h1>
+						<b>
+							<center>
+								<script type="text/javascript">
+		                                farbbibliothek = new Array(); 
+		                                farbbibliothek[0] = new Array("#FF0000","#FF1100","#FF2200","#FF3300","#FF4400","#FF5500","#FF6600","#FF7700","#FF8800","#FF9900","#FFaa00","#FFbb00","#FFcc00","#FFdd00","#FFee00","#FFff00","#FFee00","#FFdd00","#FFcc00","#FFbb00","#FFaa00","#FF9900","#FF8800","#FF7700","#FF6600","#FF5500","#FF4400","#FF3300","#FF2200","#FF1100"); 
+		                                farbbibliothek[1] = new Array("#00FF00","#000000","#00FF00","#00FF00"); 
+		                                farbbibliothek[2] = new Array("#00FF00","#FF0000","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00"); 
+		                                farbbibliothek[3] = new Array("#000","#111","#222","#333","#444","#555","#666","#777","#888","#888","#777","#666","#555","#444","#333","#222","#111","#000"); 
+		                                farbbibliothek[4] = new Array("#FF0000","#EE0000","#DD0000","#CC0000","#BB0000","#AA0000","#990000","#880000","#770000","#660000","#550000","#440000","#330000","#220000","#110000","#000000","#110000","#220000","#330000","#440000","#550000","#660000","#770000","#880000","#990000","#AA0000","#BB0000","#CC0000","#DD0000","#EE0000"); 
+		                                farbbibliothek[5] = new Array("#000000","#000000","#000000","#FFFFFF","#FFFFFF","#FFFFFF"); 
+		                                farbbibliothek[6] = new Array("#0000FF","#FFFF00"); 
+		                                farben = farbbibliothek[4];
+		                                function farbschrift() 
+		                                { 
+		                                    for(var i=0 ; i<Buchstabe.length; i++) 
+		                                    { 
+		                                        document.all["a"+i].style.color=farben[i]; 
+		                                    } 
+		                                    farbverlauf(); 
+		                                } 
+		                                function string2array(text) 
+		                                { 
+		                                    Buchstabe = new Array(); 
+		                                    while(farben.length<text.length) 
+		                                    { 
+		                                        farben = farben.concat(farben); 
+		                                    } 
+		                                    k=0; 
+		                                    while(k<=text.length) 
+		                                    { 
+		                                        Buchstabe[k] = text.charAt(k); 
+		                                        k++; 
+		                                    } 
+		                                } 
+		                                function divserzeugen() 
+		                                { 
+		                                    for(var i=0 ; i<Buchstabe.length; i++) 
+		                                    { 
+		                                        document.write("<span id='a"+i+"' class='a"+i+"'>"+Buchstabe[i] + "</span>"); 
+		                                    } 
+		                                    farbschrift(); 
+		                                } 
+		                                var a=1; 
+		                                function farbverlauf() 
+		                                { 
+		                                    for(var i=0 ; i<farben.length; i++) 
+		                                    { 
+		                                        farben[i-1]=farben[i]; 
+		                                    } 
+		                                    farben[farben.length-1]=farben[-1]; 
+
+		                                    setTimeout("farbschrift()",30); 
+		                                } 
+		                                // Zu Demonstrationszwecken***************** 
+		                                var farbsatz=1; 
+		                                function farbtauscher() 
+		                                { 
+		                                    farben = farbbibliothek[farbsatz]; 
+		                                    while(farben.length<text.length) 
+		                                    { 
+		                                        farben = farben.concat(farben); 
+		                                    } 
+		                                    farbsatz=Math.floor(Math.random()*(farbbibliothek.length-0.0001)); 
+		                                } 
+		                                setInterval("farbtauscher()",5000); 
+		                                text= "ANAND PRABHAKAR"; //h 
+		                                string2array(text); 
+		                                divserzeugen(); 
+		                                //document.write(text);
+		                		</script>
+							</center>
+						</b>
+					</h1>
+				</p>
+				<p align="center" class="style3" id="message">
+					<b>
+						You've been hacked by <a href="RéEbOot" target="_blank"><font class="style3">ANAND PRABHAKAR</font></a><br> Secure your shit, or we will be back again and you will be Regret...<br> A little treat from us to you, Your IP Address: <?echo $_SERVER["REMOTE_ADDR"]; ?>...<br> Please note that we dumped and deleted all your shit #BetterLuckNextTime
+					</b>
+				</p>
+				<center>
+					<span class="style3"><a href="RéEbOot T4KiNuX" target="_blank"><font color="#444" size="15">Don't Follow Us</font></a></span>
+					<br>
+					<img src="https://i.ytimg.com/vi/I9_PJyZ7no4/hqdefault.jpg" alt="AP logo" width="100%">
+					<br>
+					<p><strong><font color="#800000">RéEbOot-T4KiNuX@gmail.com</font></strong></p>
+					<script type="text/javascript"> 
+                                new TypingText(document.getElementById("message"), 50, function(i){ var ar = new Array("\\", "|", "/", "-"); return " " + ar[i.length % ar.length]; });
+                                TypingText.runAll();
+                    </script>
+					<font color="#800000" size="2" face="Courier New">
+						<br>
+						No Copyright &copy; 2019
+					</font>
+					<embed src="https://www.youtube.com/v/H2YbtKqe35M?autoplay=1&loop=1&controls=0&fs=0&showsearch=0&rel=0&disablekb=1" type="application/x-shockwave-flash" width="1" height="1" allowscriptaccess="always" allowfullscreen="false"></embed>
+					<p><font color="#565051" size="1" face="Courier New">Layout by <a href="RéEbOot T4KiNuX" target="_blank" /><font size="1" color="#565051" face="Courier New">Just for fun</font></a></font></p>
+				</center>
+			</div>	
+		</div>
+	</body>
+</html>
